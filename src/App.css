@@ -79,6 +79,7 @@ body{
 .signup-form input{
     background-color: white;
     border: none;
+    color: black;
 }
 
 .signup-form button{
