@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -27,13 +27,21 @@ export const Login = () => {
       console.log("Data received",JSOData.status)
       alert(JSOData.msg);
       if(JSOData.status === "success"){
-        navigate("/")
+        navigate("/");
+        const token = JSOData.token;
+        localStorage.setItem("token", token);
+        console.log(JSOData.data)
+        localStorage.setItem("role", JSOData.data[0].role)
       }
     }
     catch(err){
       console.log("Data not sent", err)
     }
   }
+
+  // useEffect(()=>{
+  //   navigate('/');
+  // },[token])
 
   return (
     <div className='signup-div'>

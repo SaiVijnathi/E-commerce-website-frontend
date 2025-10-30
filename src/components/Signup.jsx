@@ -1,17 +1,21 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [role, setRole] = useState("");
+
+    const navigate = useNavigate();
 
     const signupData = async () => {
         const dataToSend = {
             name,
             email,
-            password
+            password,
+            role
         }
         const reqOptions = {
             body : JSON.stringify(dataToSend),
@@ -27,9 +31,13 @@ export const Signup = () => {
             console.log("name", name)
             console.log("email", email)
             console.log("password", password)
+            console.log("role", role)
             console.log("Response Data",JSOData);
             console.log("JSON Data", JSONData.status);
-            alert(JSOData.status)
+            alert(JSOData.msg)
+            if(JSOData.status === "success"){
+                navigate('/login')
+            }
         }catch(err){
             console.log("Data is not sent or received", err)
         }
@@ -41,6 +49,15 @@ export const Signup = () => {
         <div className='signup'>
         <div style={{fontSize:"17.5px", fontWeight:"600"}}>Signup</div>
             <form className='signup-form'>
+                <div className='dropdown-signup'>
+                    <label>Choose Role</label>
+                    <select value={role} onChange={(e)=>setRole(e.target.value)}>
+                        <option value="">Select role</option>
+                        <option value="admin">Admin</option>
+                        <option value="customer">Customer</option>
+                        <option value="vendor">Vendor</option>
+                    </select>
+                </div>
                 <div>
                     <label>Name</label>
                     <input onChange={(e)=>setName(e.target.value)}/>

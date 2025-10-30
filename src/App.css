@@ -72,7 +72,7 @@ body{
 .signup-form label{
     font-size: 16px;
     display: inline-block;
-    width: 100px;
+    width: 130px;
     text-align: center;
 }
 
@@ -95,3 +95,12 @@ body{
     font-size: 14px;
     color: #2b2a2a;
 }
+
+.dropdown-signup select{
+    width: 173px;
+    height: 17px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
