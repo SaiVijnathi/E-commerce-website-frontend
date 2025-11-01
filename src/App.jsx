@@ -4,6 +4,7 @@ import { Login } from './components/Login'
 import { Signup } from './components/Signup'
 import { Homepage } from './components/Homepage'
 import { Logout } from './components/Logout'
+import { Sell } from './components/Sell'
 import { YourItems } from './components/YourItems'
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/logout' element={<Logout/>}/>
-        <Route path='/items' element={<YourItems/>}/>
+        <Route path='/sell' element={<Sell/>}/>
+        <Route path='/youritems' element={<YourItems/>}/>
       </Routes>
     </>
   )

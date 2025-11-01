@@ -20,7 +20,8 @@ export const TopNavigation = () => {
             {
               role==="vendor" && (
                 <>
-                  <li><Link to='/items'>Your items</Link></li>
+                  <li><Link to='/sell'>Sell</Link></li>
+                  <li><Link to='/youritems'>Your items</Link></li>
                   <li><Link to='/logout'>Logout</Link></li>
                 </>
               )
