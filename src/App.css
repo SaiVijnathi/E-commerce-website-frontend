@@ -188,3 +188,35 @@ body{
     color: black;
     margin: 5px;
 }
+
+.individual-item-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap : 30px;
+}
+
+.individual-item-grid img{
+    width: 300px;
+    height: 350px;
+    justify-self: center;
+}
+
+.details-div{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+#buttons{
+    display: flex;
+    gap: 20px;
+}
+
+#buttons button{
+    background-color: #D38204;
+    font-size: 14px;
+    border-radius: 0;
+    margin: 5px;
+}

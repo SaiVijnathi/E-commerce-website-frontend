@@ -22,6 +22,7 @@ export const TopNavigation = () => {
                 <>
                   <li><Link to='/sell'>Sell</Link></li>
                   <li><Link to='/youritems'>Your items</Link></li>
+                  {/* <li><Link to='/profile'>Profile</Link></li> */}
                   <li><Link to='/logout'>Logout</Link></li>
                 </>
               )
@@ -31,7 +32,7 @@ export const TopNavigation = () => {
                 <>
                   <li><Link to='/cart'>Cart</Link></li>
                   <li><Link to='/orders'>Orders</Link></li>
-                  <li><Link to='/profile'>Profile</Link></li>
+                  {/* <li><Link to='/profile'>Profile</Link></li> */}
                   <li><Link to='/logout'>Logout</Link></li>
                 </>
               )

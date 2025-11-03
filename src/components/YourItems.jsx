@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 export const YourItems = () => {
-  const [email, setEmail] = useState("");
+  const [items, setItems] = useState("");
   const token = localStorage.getItem("token");
   
   const sendToken = async () => {
@@ -17,19 +17,33 @@ export const YourItems = () => {
     }
     const JSONData = await fetch("http://localhost:3456/verifytoken", reqOptions);
     const JSOData = await JSONData.json();
-    setEmail(JSOData.data.email)   
+    setItems(JSOData.data)   
   }
-
-  // const getItems = async () => {
-
-  // }
 
   useEffect(()=>{
     sendToken()
-  },[])
+  },[]);
+
   return (
     <div>
       <TopNavigation/>
+      <div className='card-grid'>
+        {
+          items.length > 0 ? (
+          items.map((item, i) => (
+            <div key={i} className="item-card">
+                <img
+                  src={`http://localhost:3456/${item.itemPicture}`}
+                  alt={item.itemName}/>
+                <h3>{item.itemName}</h3>
+                <p>₹{item.itemCost}</p>
+              </div>
+          ))
+          ) : (
+            <p style={{ textAlign: "center" }}>No items found.</p>
+          )
+        }
+      </div>
     </div>
   )
 }

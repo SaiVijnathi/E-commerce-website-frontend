@@ -6,6 +6,8 @@ import { Homepage } from './components/Homepage'
 import { Logout } from './components/Logout'
 import { Sell } from './components/Sell'
 import { YourItems } from './components/YourItems'
+import { IndividualItem } from './components/IndividualItem'
+import { Cart } from './components/Cart'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path='/logout' element={<Logout/>}/>
         <Route path='/sell' element={<Sell/>}/>
         <Route path='/youritems' element={<YourItems/>}/>
+        <Route path='/individualItem' element={<IndividualItem/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
     </>
   )

@@ -9,6 +9,8 @@ export const Sell = () => {
   const [modelName, setModelName] = useState("");
   const [itemCount, setItemCount] = useState("");
   const [itemCost, setItemCost] = useState();
+
+  const token = localStorage.getItem("token");
   
   const sellItems = async () => {
       const dataToSend = new FormData();
@@ -16,7 +18,8 @@ export const Sell = () => {
       dataToSend.append("itemName", itemName);
       dataToSend.append("modelName", modelName);
       dataToSend.append("itemCount", itemCount);
-      dataToSend.append("itemCost", itemCost)
+      dataToSend.append("itemCost", itemCost);
+      dataToSend.append("token", token);
       console.log("data to send",dataToSend);
     const reqOptions = {
       method : "POST",

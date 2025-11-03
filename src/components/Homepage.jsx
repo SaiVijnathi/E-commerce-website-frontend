@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { TopNavigation } from "./TopNavigation";
+import { useNavigate } from "react-router-dom";
 
 export const Homepage = () => {
   const [items, setItems] = useState([]);
   const [activeCategory, setActiveCategory] = useState("kurthis");
+  const navigate = useNavigate();
 
   const getData = async () => {
     try {
@@ -22,6 +24,10 @@ export const Homepage = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  const handleClick = (item) => {
+    navigate("/individualItem", { state: { item } });
+  };
 
   // Filter by category
   const filteredItems = items.filter((item) => item.modelName === activeCategory);
@@ -43,7 +49,7 @@ export const Homepage = () => {
         <div className="card-grid">
           {filteredItems.length > 0 ? (
             filteredItems.map((item, i) => (
-              <div key={i} className="item-card">
+              <div key={i} className="item-card" onClick={() => handleClick(item)} >
                 <img
                   src={`http://localhost:3456/${item.itemPicture}`}
                   alt={item.itemName}/>
