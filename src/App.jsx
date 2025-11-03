@@ -8,6 +8,7 @@ import { Sell } from './components/Sell'
 import { YourItems } from './components/YourItems'
 import { IndividualItem } from './components/IndividualItem'
 import { Cart } from './components/Cart'
+import { Orders } from './components/Orders'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/youritems' element={<YourItems/>}/>
         <Route path='/individualItem' element={<IndividualItem/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/orders' element={<Orders/>}/>
       </Routes>
     </>
   )

@@ -37,6 +37,11 @@ export const IndividualItem = () => {
         const result = await response.json();
         console.log(result.item);
         alert(result.msg);
+
+        const orders = JSON.parse(localStorage.getItem("orders")) || [];
+        orders.push(item);
+        localStorage.setItem("orders", JSON.stringify(orders));
+        // alert("Item added to cart!");
     }
 
   return (
