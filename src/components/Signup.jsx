@@ -25,7 +25,7 @@ export const Signup = () => {
             }
         }
         try{
-            const JSONData = await fetch("http://localhost:3456/signup", reqOptions);
+            const JSONData = await fetch("https://e-commerce-website-backend-w2pn.onrender.com/signup", reqOptions);
             const JSOData = await JSONData.json();
             console.log(JSOData.status)
             console.log("name", name)

@@ -9,7 +9,7 @@ export const Homepage = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch("http://localhost:3456/getItemData");
+      const response = await fetch("https://e-commerce-website-backend-w2pn.onrender.com/getItemData");
       const result = await response.json();
       console.log(result);
 
@@ -51,7 +51,7 @@ export const Homepage = () => {
             filteredItems.map((item, i) => (
               <div key={i} className="item-card" onClick={() => handleClick(item)} >
                 <img
-                  src={`http://localhost:3456/${item.itemPicture}`}
+                  src={`https://e-commerce-website-backend-w2pn.onrender.com/${item.itemPicture}`}
                   alt={item.itemName}/>
                 <h3>{item.itemName}</h3>
                 <p>₹{item.itemCost}</p>

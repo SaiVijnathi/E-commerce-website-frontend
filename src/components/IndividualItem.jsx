@@ -33,7 +33,7 @@ export const IndividualItem = () => {
                 "Content-Type": "application/json"
             }
         }
-        const response = await fetch("http://localhost:3456/buynow", reqOptions);
+        const response = await fetch("https://e-commerce-website-backend-w2pn.onrender.com/buynow", reqOptions);
         const result = await response.json();
         console.log(result.item);
         alert(result.msg);
@@ -48,7 +48,7 @@ export const IndividualItem = () => {
     <div>
         <TopNavigation/>
         <div className='individual-item-grid'>
-            <img src={`http://localhost:3456/${item.itemPicture}`} alt={item.itemName}/>
+            <img src={`https://e-commerce-website-backend-w2pn.onrender.com/${item.itemPicture}`} alt={item.itemName}/>
             <div className='details-div'>
                 <h2 style={{margin : "5px"}}>{item.itemName}</h2>
                 <p style={{margin : "5px", color : "red"}}>Only {item.itemCount} items left</p>

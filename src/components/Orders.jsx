@@ -17,7 +17,7 @@ export const Orders = () => {
           orderedItems.map((item, i) => (
             <div key={i} className="item-card">
               <img
-                src={`http://localhost:3456/${item.itemPicture}`}
+                src={`https://e-commerce-website-backend-w2pn.onrender.com/${item.itemPicture}`}
                 alt={item.itemName}
               />
               <h3>{item.itemName}</h3>

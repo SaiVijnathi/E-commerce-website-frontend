@@ -15,7 +15,7 @@ export const YourItems = () => {
         "Content-Type" : "application/json"
       }
     }
-    const JSONData = await fetch("http://localhost:3456/verifytoken", reqOptions);
+    const JSONData = await fetch("https://e-commerce-website-backend-w2pn.onrender.com/verifytoken", reqOptions);
     const JSOData = await JSONData.json();
     setItems(JSOData.data)   
   }
@@ -33,7 +33,7 @@ export const YourItems = () => {
           items.map((item, i) => (
             <div key={i} className="item-card">
                 <img
-                  src={`http://localhost:3456/${item.itemPicture}`}
+                  src={`https://e-commerce-website-backend-w2pn.onrender.com/${item.itemPicture}`}
                   alt={item.itemName}/>
                 <h3>{item.itemName}</h3>
                 <p>₹{item.itemCost}</p>

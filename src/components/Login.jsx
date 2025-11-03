@@ -22,7 +22,7 @@ export const Login = () => {
       }
     }
     try{
-      const JSONData = await fetch("http://localhost:3456/login",reqOptions);
+      const JSONData = await fetch("https://e-commerce-website-backend-w2pn.onrender.com/login",reqOptions);
       const JSOData = await JSONData.json();
       console.log("Data received",JSOData.status)
       alert(JSOData.msg);

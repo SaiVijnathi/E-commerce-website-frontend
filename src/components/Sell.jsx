@@ -26,7 +26,7 @@ export const Sell = () => {
       body : dataToSend,
     }
     try{
-      const response = await fetch("http://localhost:3456/sellitems", reqOptions);
+      const response = await fetch("https://e-commerce-website-backend-w2pn.onrender.com/sellitems", reqOptions);
       console.log("data sent successfully - sell items");
       let result = await response.json();
       if(result.status === "success"){
