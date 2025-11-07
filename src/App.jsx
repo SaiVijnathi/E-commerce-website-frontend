@@ -9,6 +9,8 @@ import { YourItems } from './components/YourItems'
 import { IndividualItem } from './components/IndividualItem'
 import { Cart } from './components/Cart'
 import { Orders } from './components/Orders'
+import { Footer } from './components/Footer'
+import { Checkout } from './components/Checkout'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path='/individualItem' element={<IndividualItem/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/orders' element={<Orders/>}/>
+        <Route path='/footer' element={<Footer/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
     </>
   )
