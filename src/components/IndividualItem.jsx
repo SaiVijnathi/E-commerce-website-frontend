@@ -74,7 +74,7 @@ export const IndividualItem = () => {
             </div>
           </div>
             <div id="buttons">
-              <button onClick={() => addToCart()}>🛒 Add to Cart</button>
+              <button onClick={() => (addToCart())}>🛒 Add to Cart</button>
               <button onClick={() => buyNow()}>⚡ Buy Now</button>
             </div>
             <div style={{fontSize:"14px"}}>

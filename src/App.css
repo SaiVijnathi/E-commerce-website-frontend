@@ -43,6 +43,42 @@ body{
     font-weight: 600;
 }
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+    color: rgb(83, 81, 81);
+    font-size: 14px;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+    color: #D38204;
+    font-weight: 600;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .signup-div{
     display: flex;
     flex-direction: column;
@@ -178,6 +214,7 @@ body{
     padding: 10px;
     background-color: white;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .item-card img{
@@ -298,84 +335,6 @@ body{
     flex-direction: row;
 }
 
-/* checkout */
-.checkout-container {
-  padding: 20px;
-}
-
-.checkout-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1000px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.checkout-form,
-.checkout-summary {
-  flex: 1;
-  min-width: 300px;
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.checkout-form input,
-.checkout-form textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.summary-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.summary-item img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.place-order-btn {
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 16px;
-}
-
-.place-order-btn:hover {
-  background: #333;
-}
-
-.size-bts{
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0;
-  gap: 5px;
-}
-
-.size-bts p{
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.size-bts-div{
-  display: flex;
-  gap: 15px;
-}
-
 .size-bts-div button{
   background-color: white;
   color: black;
@@ -390,7 +349,6 @@ body{
   cursor: pointer;
   padding: 20px;
 }
-
 
 
 
@@ -465,3 +423,4 @@ body{
 .place-order-btn:hover {
   background-color: #444;
 } */
+
